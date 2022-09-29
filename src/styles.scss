@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+.simple-button{
+  background: linear-gradient(120.03deg, #41E296 24.01%, #3DBAAE 68.32%);
+  border-radius: 90px;
+  width: 100%;
+  max-width: 223px;
+  outline: none;
+  color: #ffff;
+  font-size: 20px;
+  border: none;
+  height: 60px;
+}
+.universal-div-height{
+  height: 80vh;
+}
+.same-input{
+  background: linear-gradient(126.75deg, #41E197 28.63%, #3BB5B5 97.43%);
+  border-radius: 90px;
+  width: 100%;
+  max-width: 430px;
+  min-width: 430px;
+  border: none;
+  text-align: center;
+  height: 60px;
+  font-size: 20px;
+  color: #fff;
+  outline: none;
+
+}
+.same-input::placeholder{
+  color: white;
+}
