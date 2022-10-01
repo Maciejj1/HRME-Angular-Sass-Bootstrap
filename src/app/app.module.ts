@@ -13,6 +13,7 @@ import { AccountComponent } from './pages/account/account.component';
 import { NavComponent } from './pages/nav/nav.component';
 import { SideBarComponent } from './pages/side-bar/side-bar.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     NavComponent,
     SideBarComponent,
     PageNotFoundComponent,
+    HomeComponent,
 
   ],
   imports: [

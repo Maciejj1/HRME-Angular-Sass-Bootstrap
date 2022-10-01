@@ -3,24 +3,24 @@
 <div>
   <div class="d-flex justify-content-center align-items-center div-height ">
     <div class="welcome-text d-flex justify-content-center align-items-center">
-      <img [src]="UserIcon"/>
-      <h2 class="m-4">Witaj Maciej!</h2>
+      <img class="user-icon" [src]="UserIcon"/>
+      <h5 class="m-4">Witaj Maciej!</h5>
     </div>
 
   </div>
   <div class="d-flex p-2 justify-content-center align-items-center div-button-height  ">
-    <button class="dashboard-button m-4">
-      <img [src]="DashboardIcon"/>
-    </button>
-    <button class="dashboard-button m-4">
-      <img [src]="AccountIcon"/>
-    </button>
-    <button class="dashboard-button m-4">
-      <img [src]="CandidatesIcon"/>
-    </button>
-    <button class="dashboard-button m-4">
-      <img [src]="AddCandidateIcon"/>
-    </button>
+    <a routerLink="/home" class="dashboard-button m-4">
+      <img class="icon" [src]="DashboardIcon"/>
+    </a>
+    <a routerLink="/account" class="dashboard-button m-4">
+      <img class="icon" [src]="AccountIcon"/>
+    </a>
+    <a routerLink="/candidates" class="dashboard-button m-4">
+      <img class="icon" [src]="CandidatesIcon"/>
+    </a>
+    <a routerLink="/addcandidate" class="dashboard-button m-4">
+      <img class="icon" [src]="AddCandidateIcon"/>
+    </a>
   </div>
 </div>
 </div>
