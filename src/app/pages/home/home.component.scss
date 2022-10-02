@@ -3,3 +3,14 @@
 
   max-width: 200px;
 }
+@media screen and (max-width: 1023px){
+  .big-chart{
+    width: 100%;
+    max-width: 400px;
+  }
+  .small-chart{
+    width: 100%;
+    max-width: 100px;
+  }
+
+}
