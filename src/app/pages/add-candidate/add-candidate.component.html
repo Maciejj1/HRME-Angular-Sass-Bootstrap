@@ -1,4 +1,4 @@
-<app-nav></app-nav>
+
 <div class="flexbox flexbox-width main p-2">
   <div class="flexbox-column ">
     <div>
@@ -13,12 +13,12 @@
       <div class="mobile-list add-flexbox text-white ">
         <div class="flexbox-column p-5">
           <h4>Dane osobiste</h4>
-          <input class="add-input m-2" type="text" placeholder="Imię"/>
-          <input class="add-input m-2" type="text" placeholder="Nazwisko"/>
-          <input  class="add-input m-2" type="email" placeholder="Email"/>
-          <input  class="add-input m-2" type="telephone" placeholder="Telefon"/>
-          <input  class="add-input m-2" type="date" />
-          <p id="cv" class="p-2">CV?</p>
+          <input class="add-input m-2" type="text" placeholder="Imię" [(ngModel)]="candidate.name"/>
+          <input class="add-input m-2" type="text" placeholder="Nazwisko" [(ngModel)]="candidate.surname"/>
+          <input  class="add-input m-2" type="text" placeholder="Email" [(ngModel)]="candidate.email"/>
+          <input  class="add-input m-2" type="text" placeholder="Telefon" [(ngModel)]="candidate.phone"/>
+          <input  class="add-input m-2" type="text" [(ngModel)]="candidate.date"/>
+          <p id="" class="p-2">CV?</p>
           <div class="flexbox">
           <label class="m-2">
             <input type="radio" name="choice-radio">
@@ -33,12 +33,10 @@
         </div>
         <div class="flexbox-column p-5">
           <h4>Kandydatura</h4>
-          <input class="add-input m-2" type="text" placeholder="Nazwa Stanowsika"/>
-          <input class="add-input m-2" type="text" placeholder="Doświadczenie"/>
-          <input  class="add-input m-2" type="text" placeholder="Kategoria"/>
-          <input  class="add-input m-2" type="text" placeholder="Jezyk"/>
-
-
+          <input class="add-input m-2" type="text" placeholder="Nazwa Stanowsika" [(ngModel)]="candidate.position"/>
+          <input class="add-input m-2" type="text" placeholder="Doświadczenie" [(ngModel)]="candidate.experience"/>
+          <input  class="add-input m-2" type="text" placeholder="Kategoria" [(ngModel)]="candidate.category"/>
+          <input  class="add-input m-2" type="text" placeholder="Jezyk" [(ngModel)]="candidate.language"/>
         </div>
         <div class="flexbox-column p-5">
         <h4>Opinia</h4>
@@ -47,10 +45,9 @@
           <form>
             <textarea  class="add-opinion m-2"  placeholder="Krótka opinia"></textarea>
           </form>
-
-
         <p id="cv" class="p-2">Przyjęty?</p>
-        <div class="flexbox">
+          <input type="text" class="add-input m-2" [(ngModel)]="candidate.adopted" placeholder="przyjety?"/>
+        <div class="flexbox" >
           <label class="m-2">
             <input type="radio" name="choice-radio">
             Yes
@@ -63,7 +60,7 @@
       </div>
 
       </div><div class="flexbox div-width">
-      <button class=" add-button">Zatwierdz</button>
+      <button class=" add-button" (click)="addCandidate()">Zatwierdz</button>
     </div>
     </div>
   </div>

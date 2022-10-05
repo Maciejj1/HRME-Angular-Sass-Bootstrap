@@ -5,7 +5,7 @@
       <img class="page-icon m-4" [src]="icon"/>
     </div>
 
-    <table  class="flexbox mobile-table">
+    <table  class="flexbox mobile-table" >
 <tbody class="mobile-table  ">
       <tr class=" beam mobile-table-list  ">
         <th class="m-3">ZDJECIE</th>
@@ -21,23 +21,26 @@
         <th class="m-2">JĘZYK</th>
         <th class="m-2">DOSTĘPNOŚĆ</th>
         <th class="m-2">PRZYJĘTY</th>
+        <th class="m-2">Usuwanie</th>
       </tr>
-      <tr class=" table-list mobile-table-list ">
+      <tr class=" table-list mobile-table-list " *ngFor="let candidate of candidates; let odd = odd">
         <td class="m-2"><img class="user" [src]="user"></td>
-        <td class="m-2">Maciej</td>
-        <td class="m-2">Wawryszuk</td>
-        <td class="m-2">dupa123@gmail.com</td>
-        <td class="m-2">+48123456789</td>
-        <td class="m-2">01/01/2001</td>
-        <td class="m-2">TAK</td>
-        <td class="m-2">Junior Angular Developer</td>
-        <td class="m-2">1</td>
-        <td class="m-2">Frontend</td>
-        <td class="m-2">Angular</td>
-        <td class="m-2">Natychmiast</td>
-        <td class="m-2">Przyjęty</td>
+        <td class="m-2">{{candidate.name}}</td>
+        <td class="m-2">{{candidate.surname}}</td>
+        <td class="m-2">{{candidate.email}}</td>
+        <td class="m-2">{{candidate.phone}}</td>
+        <td class="m-2">{{candidate.date}}</td>
+        <td class="m-2">{{candidate.cv}}</td>
+        <td class="m-2">{{candidate.position}}</td>
+        <td class="m-2">{{candidate.experience}}</td>
+        <td class="m-2">{{candidate.category}}</td>
+        <td class="m-2">{{candidate.language}}</td>
+        <td class="m-2">{{candidate.availability}}</td>
+        <td class="m-2">{{candidate.adopted}}</td>
+        <td class="m-2"><button class="btn" (click)="deleteCandidate(candidate.id)">Usuń</button></td>
       </tr></tbody>
     </table>
+    <app-add-candidate #form (newCandidate)="onNewCandidate($event)" ></app-add-candidate>
 
   </div>
 </div>

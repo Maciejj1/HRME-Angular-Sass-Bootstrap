@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Candidate} from "../database/candidate";
 
 @Component({
   selector: 'app-add-candidate',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCandidateComponent {
 icon = 'assets/images/add-candidate-icon.svg'
-  constructor() { }
-
-
+  @Output () newCandidate = new EventEmitter<Candidate>();
+  candidate: Candidate={ id: 0, date: '', cv: '', phone: '', surname: '', name: '', language: '', position: '', availability: '', experience: 0, category: '', email: '', adopted: '' }
+addCandidate(){
+  this.newCandidate.emit(this.candidate)
+  this.candidate = { id: 0, date: '', cv: '', phone: '', surname: '', name: '', language: '', position: '', availability: '', experience: 0, category: '', email: '', adopted: '' }
+}
 }

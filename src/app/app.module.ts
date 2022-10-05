@@ -14,6 +14,8 @@ import { NavComponent } from './pages/nav/nav.component';
 import { SideBarComponent } from './pages/side-bar/side-bar.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HomeComponent } from './pages/home/home.component';
+import {FormsModule} from "@angular/forms";
+
 
 
 @NgModule({
@@ -32,10 +34,11 @@ import { HomeComponent } from './pages/home/home.component';
     HomeComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent,
     WelcomeComponent,
